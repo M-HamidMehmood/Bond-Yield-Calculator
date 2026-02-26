@@ -1,0 +1,10 @@
+{
+  "name": "bond-yield-calculator",
+  "private": true,
+  "description": "Bond yield calculator – NestJS backend + React frontend",
+  "scripts": {
+    "dev:backend": "cd backend && npm run start:dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  }
+}

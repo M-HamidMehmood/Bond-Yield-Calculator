@@ -1,0 +1,28 @@
+---
+description: Cursor AI and project best practices
+alwaysApply: true
+---
+
+# Cursor AI & Project Best Practices
+
+## General
+- Prefer small, focused edits over large refactors. One concern per change.
+- Use existing patterns and file structure; don’t invent new ones without reason.
+- Run tests and lint after changes; fix any new failures before finishing.
+- Never commit secrets, API keys, or `.env` (use `.env.example` for templates).
+
+## Backend (NestJS)
+- Keep controllers thin; put logic in services. Use DTOs with class-validator for input.
+- Use the global ValidationPipe (whitelist, forbidNonWhitelisted, transform) as configured.
+- Write unit tests for services; use Nest testing utilities and mocks for dependencies.
+- Prefer dependency injection and Nest modules over global state or singletons.
+
+## Frontend (React + Vite)
+- Use functional components and hooks. Extract reusable logic into custom hooks.
+- Prefer TypeScript types/interfaces for props and API responses.
+- Call backend APIs via relative URLs or env-based base URL; handle loading and errors in UI.
+- Keep components under ~200 lines; split or extract subcomponents when larger.
+
+## Conventions (when applicable)
+- Branch: `<ticket>_<Publisher>_<version>_<method>_<endpoint>_<defect_or_feature>`
+- Commit: `<ticket> <Publisher> <version> <method> <endpoint> <short description>`
