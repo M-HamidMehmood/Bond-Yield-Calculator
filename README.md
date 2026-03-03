@@ -2,6 +2,8 @@
 
 A friendly full-stack web app to **calculate bond yields and cash flows**. Enter face value, coupon rate, market price, and maturity — get current yield, yield to maturity (YTM), total interest, premium/discount, and a full cash flow schedule in a clean, responsive UI.
 
+![Bond Yield Calculator](app-screenshot.png)
+
 ---
 
 ## What you get
